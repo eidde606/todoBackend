@@ -9,7 +9,13 @@ const app = express();
 const port = 5001;
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://main--resplendent-dusk-111c06.netlify.app",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
