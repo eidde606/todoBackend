@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "https://main--resplendent-dusk-111c06.netlify.app",
+    origin: "https://todolistfrontend-e161200f9920.herokuapp.com",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
